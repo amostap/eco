@@ -143,6 +143,9 @@ namespace eco_design
             DrawGraph(FSum12(GraphVariant.MaxAndMax), Colors.OrangeRed, 0, Range, 0, Range);
                 // TODO change it to min and max
             DrawGraph(FSum21(GraphVariant.MaxAndMax), Colors.Cyan, 0, Range, 0, Range);
+
+            DrawGraph(FSum12(GraphVariant.MaxAndMin), Colors.Chartreuse, 0, Range, 0, Range);
+            DrawGraph(FSum21(GraphVariant.MaxAndMin), Colors.DarkGreen, 0, Range, 0, Range);
         }
 
         public Func<double, double, double> FSum12(GraphVariant variant)
@@ -151,31 +154,11 @@ namespace eco_design
 
             switch (variant) //TODO change to min and max
             {
-                case GraphVariant.MinAndMin:
-                    res = (x, y) =>
-                    {
-                        var xx1 = new[] {x11, x};
-                        var xxs2 = new[] {X21, y};
-
-                        return _algorithm.SumF(xx1, xxs2, Parameter.X12);
-                    };
-                    break;
-
-                case GraphVariant.MinAndMax:
-                    res = (x, y) =>
-                    {
-                        var xx1 = new[] {x11, x};
-                        var xxs2 = new[] {X21, y};
-
-                        return _algorithm.SumF(xx1, xxs2, Parameter.X12);
-                    };
-                    break;
-
                 case GraphVariant.MaxAndMin:
                     res = (x, y) =>
                     {
                         var xx1 = new[] {x11, x};
-                        var xxs2 = new[] {X21, y};
+                        var xxs2 = new[] { X21min, y };
 
                         return _algorithm.SumF(xx1, xxs2, Parameter.X12);
                     };
@@ -185,7 +168,7 @@ namespace eco_design
                     res = (x, y) =>
                     {
                         var xx1 = new[] {x11, x};
-                        var xxs2 = new[] {X21, y};
+                        var xxs2 = new[] { X21max, y };
 
                         return _algorithm.SumF(xx1, xxs2, Parameter.X12);
                     };
@@ -201,31 +184,11 @@ namespace eco_design
 
             switch (variant) //TODO change to min and max
             {
-                case GraphVariant.MinAndMin:
-                    res = (x, y) =>
-                    {
-                        var xx1 = new[] {x21, x};
-                        var xxs2 = new[] {X11, y};
-
-                        return _algorithm.SumF(xx1, xxs2, Parameter.X21);
-                    };
-                    break;
-
-                case GraphVariant.MinAndMax:
-                    res = (x, y) =>
-                    {
-                        var xx1 = new[] {x21, x};
-                        var xxs2 = new[] {X11, y};
-
-                        return _algorithm.SumF(xx1, xxs2, Parameter.X21);
-                    };
-                    break;
-
                 case GraphVariant.MaxAndMin:
                     res = (x, y) =>
                     {
                         var xx1 = new[] { x21, x };
-                        var xxs2 = new[] { X11, y };
+                        var xxs2 = new[] { X11min, y };
 
                         return _algorithm.SumF(xx1, xxs2, Parameter.X21);
                     };
@@ -235,7 +198,7 @@ namespace eco_design
                     res = (x, y) =>
                     {
                         var xx1 = new[] { x21, x };
-                        var xxs2 = new[] { X11, y };
+                        var xxs2 = new[] { X11max, y };
 
                         return _algorithm.SumF(xx1, xxs2, Parameter.X21);
                     };
