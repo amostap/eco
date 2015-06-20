@@ -131,14 +131,9 @@
 
         <h:HelixViewport3D Name="HelixViewport3D" 
                                PanGesture="LeftClick"
-                               DataContext="{Binding PreviewPlot, UpdateSourceTrigger=PropertyChanged}" RenderTransformOrigin="0.499,0.503" Margin="10" Grid.Column="1" BorderThickness="1" BorderBrush="Black"
-                               >
-            <!--DefaultCamera="{Binding PerspectiveCamera, UpdateSourceTrigger=PropertyChanged}" 
-                               services:HelixViewport3DZoomExtent.ZoomExtentsOnUpdate="{Binding RelativeSource={RelativeSource AncestorType={x:Type views:WellSurveyPlot3DPreview}}, 
-                                                                                        Path=DataContext.PreviewUpdatedReZoom, UpdateSourceTrigger=PropertyChanged}"-->
-
+            DataContext="{Binding PreviewPlot, UpdateSourceTrigger=PropertyChanged}" 
+            RenderTransformOrigin="0.499,0.503" Margin="10" Grid.Column="1">
             <h:SunLight/>
-
         </h:HelixViewport3D>
         <Label x:Name="label" Content="min" HorizontalAlignment="Left" Margin="18,448,0,0" VerticalAlignment="Top" Height="26" Width="30"/>
         <Label x:Name="label1" Content="max" HorizontalAlignment="Left" Margin="73,448,0,0" VerticalAlignment="Top" Height="26" Width="32"/>

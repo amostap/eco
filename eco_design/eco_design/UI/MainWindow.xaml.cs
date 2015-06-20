@@ -3,6 +3,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Media3D;
+using eco_design.BLL;
 using HelixToolkit.Wpf;
 using System.Windows.Forms;
 
@@ -16,22 +17,22 @@ namespace eco_design
         private const int MaxDistance = 30;
         private const int Range = 20;
 
-        private double[] x1 { get; set; }      //x1 == X1 = [X11, X12]
+        private double[] x1 { get; set; } //x1 == X1 = [X11, X12]
 
-        private double[] X1 { get; set; }      //X1 == X'1 = [X'11,X'12]
+        private double[] X1 { get; set; } //X1 == X'1 = [X'11,X'12]
 
-        private double[] x2 { get; set; }      //x2 == X2 = [X21, X22]
+        private double[] x2 { get; set; } //x2 == X2 = [X21, X22]
 
-        private double[] X2 { get; set; }      //X2 == X'2 = [X'21; X'22]
+        private double[] X2 { get; set; } //X2 == X'2 = [X'21; X'22]
 
 
-        public double[,] A { get; set; }                                // 2 x 3
+        public double[,] A { get; set; } // 2 x 3
 
-        public double[,] N { get; set; }                                // 2 x 3
+        public double[,] N { get; set; } // 2 x 3
 
-        public double[,] T { get; set; }                                // 2 x 4
+        public double[,] T { get; set; } // 2 x 4
 
-        public double[,] K { get; set; }                                // 2 x 8
+        public double[,] K { get; set; } // 2 x 8
 
         public double a12, aa12, aaa12;                                // a12=a12' aa12=a''12...предприятие 1
         public double a21, aa21, aaa21;                                // same предприятие 2
@@ -45,49 +46,22 @@ namespace eco_design
         public double x11, x12, X11max, X12max, X11min, X12min;
         public double x21, x22, X21max, X22max, X21min, X22min;
 
+        private Algorithm _algorithm = new Algorithm();
+
         public MainWindow()
         {
             InitializeComponent();
 
-            TubeVisual3D tube = new TubeVisual3D();
-            tube.Path = new Point3DCollection
-            {
-                new Point3D(-MaxDistance, 0, 0), 
-                new Point3D(MaxDistance, 0, 0)
-            };
-            tube.Diameter = 0.1;
-            tube.Fill = Brushes.Red;
-            tube.IsPathClosed = false;
+            DrawCoordinates();
 
-            HelixViewport3D.Children.Add(tube);
+            DrawWire();
+        }
             
-            tube = new TubeVisual3D();
-            tube.Path = new Point3DCollection
+        private void DrawWire()
             {
-                new Point3D(0, -MaxDistance, 0), 
-                new Point3D(0, MaxDistance, 0)
-            };
-            tube.Diameter = 0.1;
-            tube.Fill = Brushes.Blue;
-            tube.IsPathClosed = false;
-
-            HelixViewport3D.Children.Add(tube);
-
-            tube = new TubeVisual3D();
-            tube.Path = new Point3DCollection
-            {
-                new Point3D(0, 0, -MaxDistance), 
-                new Point3D(0, 0, MaxDistance)
-            };
-            tube.Diameter = 0.1;
-            tube.Fill = Brushes.Green;
-            tube.IsPathClosed = false;
-
-            HelixViewport3D.Children.Add(tube);
-
             for (int i = -MaxDistance; i <= MaxDistance; i++)
             {
-                tube = new TubeVisual3D();
+                var tube = new TubeVisual3D();
                 tube.Path = new Point3DCollection
                 {
                     new Point3D(i, -MaxDistance, 0), 
@@ -113,8 +87,12 @@ namespace eco_design
 
                 HelixViewport3D.Children.Add(tube);
             }
+        }
 
-            var mas = new TubeVisual3D[2 * Range];
+        private void DrawGraph(Func<double, double, double> function, Color functionColor,
+            double xMin, double xMax, double yMin, double yMax)
+        {
+            var mas = new TubeVisual3D[2*Range];
 
             for (int x = -Range; x < Range; x++)
             {
@@ -122,12 +100,11 @@ namespace eco_design
 
                 for (int y = -Range; y < Range; y++)
                 {
-                    point3DCollection.Add(new Point3D(x, y, GetFunction(x, y)));
-                    
+                    point3DCollection.Add(new Point3D(x, y, function(x, y)));
                 }
 
-                mas[x + Range] = new TubeVisual3D { Path = point3DCollection };
-                mas[x + Range].Material = new DiffuseMaterial(new SolidColorBrush(Colors.Chartreuse));
+                mas[x + Range] = new TubeVisual3D {Path = point3DCollection};
+                mas[x + Range].Material = new DiffuseMaterial(new SolidColorBrush(functionColor));
                 mas[x + Range].Diameter = 0.1;
             }
 
@@ -144,12 +121,11 @@ namespace eco_design
 
                 for (int x = -Range; x < Range; x++)
                 {
-                    point3DCollection.Add(new Point3D(x, y, GetFunction(x, y)));
-
+                    point3DCollection.Add(new Point3D(x, y, function(x, y)));
                 }
 
-                mas[y + Range] = new TubeVisual3D { Path = point3DCollection };
-                mas[y + Range].Material = new DiffuseMaterial(new SolidColorBrush(Colors.Chartreuse));
+                mas[y + Range] = new TubeVisual3D {Path = point3DCollection};
+                mas[y + Range].Material = new DiffuseMaterial(new SolidColorBrush(functionColor));
                 mas[y + Range].Diameter = 0.1;
             }
 
@@ -159,9 +135,159 @@ namespace eco_design
             }
         }
 
-        private double GetFunction(double x, double y)
+        public void DrawAllGraphs()
         {
-            return Math.Abs(0.1*(x*x - y*y));
+            HelixViewport3D.Children.Remove(HelixViewport3D.Children.Last());
+            HelixViewport3D.Children.Remove(HelixViewport3D.Children.Last());
+
+            DrawGraph(FSum12(GraphVariant.MaxAndMax), Colors.OrangeRed, 0, Range, 0, Range);
+                // TODO change it to min and max
+            DrawGraph(FSum21(GraphVariant.MaxAndMax), Colors.Cyan, 0, Range, 0, Range);
+        }
+
+        public Func<double, double, double> FSum12(GraphVariant variant)
+        {
+            Func<double, double, double> res = null;
+
+            switch (variant) //TODO change to min and max
+            {
+                case GraphVariant.MinAndMin:
+                    res = (x, y) =>
+                    {
+                        var xx1 = new[] {x11, x};
+                        var xxs2 = new[] {X21, y};
+
+                        return _algorithm.SumF(xx1, xxs2, Parameter.X12);
+                    };
+                    break;
+
+                case GraphVariant.MinAndMax:
+                    res = (x, y) =>
+                    {
+                        var xx1 = new[] {x11, x};
+                        var xxs2 = new[] {X21, y};
+
+                        return _algorithm.SumF(xx1, xxs2, Parameter.X12);
+                    };
+                    break;
+
+                case GraphVariant.MaxAndMin:
+                    res = (x, y) =>
+                    {
+                        var xx1 = new[] {x11, x};
+                        var xxs2 = new[] {X21, y};
+
+                        return _algorithm.SumF(xx1, xxs2, Parameter.X12);
+                    };
+                    break;
+
+                case GraphVariant.MaxAndMax:
+                    res = (x, y) =>
+                    {
+                        var xx1 = new[] {x11, x};
+                        var xxs2 = new[] {X21, y};
+
+                        return _algorithm.SumF(xx1, xxs2, Parameter.X12);
+                    };
+                    break;
+            }
+
+            return res;
+        }
+
+        public Func<double, double, double> FSum21(GraphVariant variant)
+        {
+            Func<double, double, double> res = null;
+
+            switch (variant) //TODO change to min and max
+            {
+                case GraphVariant.MinAndMin:
+                    res = (x, y) =>
+                    {
+                        var xx1 = new[] {x21, x};
+                        var xxs2 = new[] {X11, y};
+
+                        return _algorithm.SumF(xx1, xxs2, Parameter.X21);
+                    };
+                    break;
+
+                case GraphVariant.MinAndMax:
+                    res = (x, y) =>
+                    {
+                        var xx1 = new[] {x21, x};
+                        var xxs2 = new[] {X11, y};
+
+                        return _algorithm.SumF(xx1, xxs2, Parameter.X21);
+                    };
+                    break;
+
+                case GraphVariant.MaxAndMin:
+                    res = (x, y) =>
+                    {
+                        var xx1 = new[] { x21, x };
+                        var xxs2 = new[] { X11, y };
+
+                        return _algorithm.SumF(xx1, xxs2, Parameter.X21);
+                    };
+                    break;
+
+                case GraphVariant.MaxAndMax:
+                    res = (x, y) =>
+                    {
+                        var xx1 = new[] { x21, x };
+                        var xxs2 = new[] { X11, y };
+
+                        return _algorithm.SumF(xx1, xxs2, Parameter.X21);
+                    };
+                    break;
+            }
+
+            return res;
+        }
+
+        private void DrawCoordinates()
+        {
+            TubeVisual3D tube = new TubeVisual3D
+            {
+                Path = new Point3DCollection
+                {
+                    new Point3D(-MaxDistance, 0, 0),
+                    new Point3D(MaxDistance, 0, 0)
+                },
+                Diameter = 0.1,
+                Fill = Brushes.Red,
+                IsPathClosed = false
+            };
+
+            HelixViewport3D.Children.Add(tube);
+
+            tube = new TubeVisual3D
+            {
+                Path = new Point3DCollection
+                {
+                    new Point3D(0, -MaxDistance, 0),
+                    new Point3D(0, MaxDistance, 0)
+                },
+                Diameter = 0.1,
+                Fill = Brushes.Green,
+                IsPathClosed = false
+            };
+
+            HelixViewport3D.Children.Add(tube);
+
+            tube = new TubeVisual3D
+            {
+                Path = new Point3DCollection
+        {
+                    new Point3D(0, 0, -MaxDistance),
+                    new Point3D(0, 0, MaxDistance)
+                },
+                Diameter = 0.1,
+                Fill = Brushes.Blue,
+                IsPathClosed = false
+            };
+
+            HelixViewport3D.Children.Add(tube);
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -210,7 +336,7 @@ namespace eco_design
 
                 if (a12 > 0 && aa12 > 0 && aaa12 > 0 && a21 > 0 && aa21 > 0 && aaa21 > 0)
                 {
-                    A = new[,] { { a12, aa12, aaa12 }, { a21, aa21, aaa21 } };
+                    A = new[,] {{a12, aa12, aaa12}, {a21, aa21, aaa21}};
                 }
                 else
                     System.Windows.MessageBox.Show("Введите верные A'21, A22...");
@@ -226,7 +352,7 @@ namespace eco_design
 
                 if (nns > 0 && nfm > 0 && nim > 0 && nns1 > 0 && nfm1 > 0 && nim1 > 0)
                 {
-                    N = new[,] { { nns, nfm, nim }, { nns1, nfm1, nim1 } };
+                    N = new[,] {{nns, nfm, nim}, {nns1, nfm1, nim1}};
                 }
                 else
                     System.Windows.MessageBox.Show("Введите верные Nns, Nfm, Nim");
@@ -244,7 +370,7 @@ namespace eco_design
 
                 if (t11 > 0 && t12 > 0 && T21 > 0 && T22 > 0 && t21 > 0 && t22 > 0 && T11 > 0 && T12 > 0)
                 {
-                    T = new[,] { { t11, t12, T21, T22 }, { t21, t22, T11, T12 } };
+                    T = new[,] {{t11, t12, T21, T22}, {t21, t22, T11, T12}};
                 }
                 else
                     System.Windows.MessageBox.Show("Введите верные T");
@@ -273,15 +399,35 @@ namespace eco_design
                 if (k11 > 0 && K11 > 0 && k12 > 0 && k21 > 0 && K21 > 0 && k22 > 0 && K22 > 0 
                     && kk21 > 0 && KK21 > 0 && kk22 > 0 && KK22 > 0 && kk11 > 0 && KK11 > 0 && kk12 > 0 && KK12 > 0)
                 {
-                        K = new[,] { { k11, K11, k12, K12, k21, K21, k22, K22 },
-                    { kk21, KK21, kk22, KK22, kk11, KK11, kk12, KK12 } };
+                    K = new[,]
+                    {
+                        {k11, K11, k12, K12, k21, K21, k22, K22},
+                        {kk21, KK21, kk22, KK22, kk11, KK11, kk12, KK12}
+                    };
                 }
                 else
                     System.Windows.MessageBox.Show("Введите верные K");
 
+
+                _algorithm.T = T;
+                _algorithm.A = A;
+                _algorithm.N = N;
+                _algorithm.K = K;
+
+                DrawAllGraphs();
             }
             catch (Exception)
-            { System.Windows.MessageBox.Show("Введите верные данные"); };
+            {
+                System.Windows.MessageBox.Show("Введите верные данные");
+            }
         }
+        }
+
+    public enum GraphVariant
+    {
+        MinAndMin,
+        MinAndMax,
+        MaxAndMin,
+        MaxAndMax
     }
 }
