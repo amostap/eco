@@ -118,8 +118,6 @@
         <TextBox x:Name="textBoxX22" HorizontalAlignment="Left" Height="16" Margin="172,449,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
 
         <Button x:Name="button" Content="Нарисовать график" HorizontalAlignment="Left" Margin="8,539,0,0" VerticalAlignment="Top" Width="214" Click="button_Click" Height="20" Background="#FFE24141" IsDefault="True"/>
-        <GroupBox x:Name="groupBox" Header="Предприятие 1" HorizontalAlignment="Left" Margin="85,20,0,0" VerticalAlignment="Top" Height="497" Width="109" BorderBrush="Black" Grid.Column="1"/>
-        <GroupBox x:Name="groupBox1" Header="Предприятие 2" HorizontalAlignment="Left" Margin="178,20,0,0" VerticalAlignment="Top" Height="497" Width="100" BorderBrush="Black" Grid.Column="1"/>
 
         <h:HelixViewport3D Name="HelixViewport3D" 
                                PanGesture="LeftClick"
