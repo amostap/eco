@@ -13,117 +13,117 @@
             <ColumnDefinition Width="232"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="labelk11" Content="k-11" HorizontalAlignment="Left" Margin="12,61,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelk11p" Content="k+11" HorizontalAlignment="Left" Margin="12,81,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelk12" Content="k-12" HorizontalAlignment="Left" Margin="12,101,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelk12p" Content="k+12" HorizontalAlignment="Left" Margin="12,121,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBoxk11" HorizontalAlignment="Left" Height="16" Margin="60,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxk11p" HorizontalAlignment="Left" Height="16" Margin="60,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxk12" HorizontalAlignment="Left" Height="16" Margin="60,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxk12p" HorizontalAlignment="Left" Height="16" Margin="60,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <Label x:Name="labelk11" Content="k-11" HorizontalAlignment="Left" Margin="8,61,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelk11p" Content="k+11" HorizontalAlignment="Left" Margin="8,81,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelk12" Content="k-12" HorizontalAlignment="Left" Margin="8,101,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelk12p" Content="k+12" HorizontalAlignment="Left" Margin="8,121,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxk11" HorizontalAlignment="Left" Height="16" Margin="56,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxk11p" HorizontalAlignment="Left" Height="16" Margin="56,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxk12" HorizontalAlignment="Left" Height="16" Margin="56,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxk12p" HorizontalAlignment="Left" Height="16" Margin="56,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
 
-        <Label x:Name="labelk21" Content="k'-21" HorizontalAlignment="Left" Margin="3,141,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelk21p" Content="k'+21" HorizontalAlignment="Left" Margin="3,161,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelk22" Content="k'-22" HorizontalAlignment="Left" Margin="3,181,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelk22p" Content="k'+22" HorizontalAlignment="Left" Margin="3,201,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBoxk21" HorizontalAlignment="Left" Height="16" Margin="51,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxk21p" HorizontalAlignment="Left" Height="16" Margin="51,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxk22" HorizontalAlignment="Left" Height="16" Margin="51,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxk22p" HorizontalAlignment="Left" Height="16" Margin="51,206,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <Label x:Name="labelk21" Content="k'-21" HorizontalAlignment="Left" Margin="8,141,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelk21p" Content="k'+21" HorizontalAlignment="Left" Margin="8,161,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelk22" Content="k'-22" HorizontalAlignment="Left" Margin="8,181,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelk22p" Content="k'+22" HorizontalAlignment="Left" Margin="8,201,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxk21" HorizontalAlignment="Left" Height="16" Margin="56,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxk21p" HorizontalAlignment="Left" Height="16" Margin="56,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxk22" HorizontalAlignment="Left" Height="16" Margin="56,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxk22p" HorizontalAlignment="Left" Height="16" Margin="56,206,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
 
-        <Label x:Name="labek11" Content="k'-11" HorizontalAlignment="Left" Margin="117,61,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labek11p" Content="k'+11" HorizontalAlignment="Left" Margin="117,81,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labek12" Content="k'-12" HorizontalAlignment="Left" Margin="117,101,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labek12p" Content="k'+12" HorizontalAlignment="Left" Margin="117,121,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBok11" HorizontalAlignment="Left" Height="16" Margin="157,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBok11p" HorizontalAlignment="Left" Height="16" Margin="157,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBok12" HorizontalAlignment="Left" Height="16" Margin="157,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBok12p" HorizontalAlignment="Left" Height="16" Margin="157,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <Label x:Name="labek11" Content="k'-11" HorizontalAlignment="Left" Margin="122,61,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labek11p" Content="k'+11" HorizontalAlignment="Left" Margin="122,81,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labek12" Content="k'-12" HorizontalAlignment="Left" Margin="122,101,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labek12p" Content="k'+12" HorizontalAlignment="Left" Margin="122,121,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBok11" HorizontalAlignment="Left" Height="16" Margin="162,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBok11p" HorizontalAlignment="Left" Height="16" Margin="162,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBok12" HorizontalAlignment="Left" Height="16" Margin="162,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBok12p" HorizontalAlignment="Left" Height="16" Margin="162,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
 
-        <Label x:Name="labek21m" Content="k-21" HorizontalAlignment="Left" Margin="117,141,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labek21" Content="k+21" HorizontalAlignment="Left" Margin="117,161,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labek22m" Content="k-22" HorizontalAlignment="Left" Margin="117,181,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labek22" Content="k+22" HorizontalAlignment="Left" Margin="117,201,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBok21" HorizontalAlignment="Left" Height="16" Margin="157,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBok21p" HorizontalAlignment="Left" Height="16" Margin="157,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBok22" HorizontalAlignment="Left" Height="16" Margin="157,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBok22p" HorizontalAlignment="Left" Height="16" Margin="157,206,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <Label x:Name="labek21m" Content="k-21" HorizontalAlignment="Left" Margin="122,141,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labek21" Content="k+21" HorizontalAlignment="Left" Margin="122,161,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labek22m" Content="k-22" HorizontalAlignment="Left" Margin="122,181,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labek22" Content="k+22" HorizontalAlignment="Left" Margin="122,201,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBok21" HorizontalAlignment="Left" Height="16" Margin="162,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBok21p" HorizontalAlignment="Left" Height="16" Margin="162,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBok22" HorizontalAlignment="Left" Height="16" Margin="162,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBok22p" HorizontalAlignment="Left" Height="16" Margin="162,206,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
 
-        <Label x:Name="labelT11" Content="T11" HorizontalAlignment="Left" Margin="3,221,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelT12" Content="T12" HorizontalAlignment="Left" Margin="3,241,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelT21" Content="T'21" HorizontalAlignment="Left" Margin="3,261,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelT22" Content="T'22" HorizontalAlignment="Left" Margin="3,281,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBoxT11" HorizontalAlignment="Left" Height="16" Margin="51,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxT12" HorizontalAlignment="Left" Height="16" Margin="51,246,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxT21" HorizontalAlignment="Left" Height="16" Margin="51,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxT22" HorizontalAlignment="Left" Height="16" Margin="51,286,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <Label x:Name="labelT11" Content="T11" HorizontalAlignment="Left" Margin="8,221,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelT12" Content="T12" HorizontalAlignment="Left" Margin="8,241,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelT21" Content="T'21" HorizontalAlignment="Left" Margin="8,261,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelT22" Content="T'22" HorizontalAlignment="Left" Margin="8,281,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxT11" HorizontalAlignment="Left" Height="16" Margin="56,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxT12" HorizontalAlignment="Left" Height="16" Margin="56,246,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxT21" HorizontalAlignment="Left" Height="16" Margin="56,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxT22" HorizontalAlignment="Left" Height="16" Margin="56,286,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
 
-        <Label x:Name="labeT11" Content="T'11" HorizontalAlignment="Left" Margin="117,221,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labeT12" Content="T'12" HorizontalAlignment="Left" Margin="117,241,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labeT21" Content="T21" HorizontalAlignment="Left" Margin="117,261,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labeT22" Content="T22" HorizontalAlignment="Left" Margin="117,281,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBoT11" HorizontalAlignment="Left" Height="16" Margin="157,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoT12" HorizontalAlignment="Left" Height="16" Margin="157,246,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoT21" HorizontalAlignment="Left" Height="16" Margin="157,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoT22" HorizontalAlignment="Left" Height="16" Margin="157,286,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <Label x:Name="labeT11" Content="T'11" HorizontalAlignment="Left" Margin="122,221,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labeT12" Content="T'12" HorizontalAlignment="Left" Margin="122,241,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labeT21" Content="T21" HorizontalAlignment="Left" Margin="122,261,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labeT22" Content="T22" HorizontalAlignment="Left" Margin="122,281,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoT11" HorizontalAlignment="Left" Height="16" Margin="162,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoT12" HorizontalAlignment="Left" Height="16" Margin="162,246,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoT21" HorizontalAlignment="Left" Height="16" Margin="162,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoT22" HorizontalAlignment="Left" Height="16" Margin="162,286,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
 
-        <Label x:Name="labelA12" Content="a'12" HorizontalAlignment="Left" Margin="3,301,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelAA12" Content="a''12" HorizontalAlignment="Left" Margin="3,321,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelAAAA12" Content="a'''12" HorizontalAlignment="Left" Margin="3,341,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labeA21" Content="a'21" HorizontalAlignment="Left" Margin="117,301,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labeAA21" Content="a''21" HorizontalAlignment="Left" Margin="117,321,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labeAAAA21" Content="a'''21" HorizontalAlignment="Left" Margin="117,341,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelA12" Content="a'12" HorizontalAlignment="Left" Margin="8,301,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelAA12" Content="a''12" HorizontalAlignment="Left" Margin="8,321,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelAAAA12" Content="a'''12" HorizontalAlignment="Left" Margin="8,341,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labeA21" Content="a'21" HorizontalAlignment="Left" Margin="122,301,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labeAA21" Content="a''21" HorizontalAlignment="Left" Margin="122,321,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labeAAAA21" Content="a'''21" HorizontalAlignment="Left" Margin="122,341,0,0" VerticalAlignment="Top"/>
 
-        <TextBox x:Name="textBoxA12" HorizontalAlignment="Left" Height="16" Margin="51,306,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxAA12" HorizontalAlignment="Left" Height="16" Margin="51,326,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxAAA12" HorizontalAlignment="Left" Height="16" Margin="51,346,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxA21" HorizontalAlignment="Left" Height="16" Margin="157,306,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxAA21" HorizontalAlignment="Left" Height="16" Margin="157,326,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxAAA21" HorizontalAlignment="Left" Height="16" Margin="157,346,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxA12" HorizontalAlignment="Left" Height="16" Margin="56,306,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxAA12" HorizontalAlignment="Left" Height="16" Margin="56,326,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxAAA12" HorizontalAlignment="Left" Height="16" Margin="56,346,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxA21" HorizontalAlignment="Left" Height="16" Margin="162,306,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxAA21" HorizontalAlignment="Left" Height="16" Margin="162,326,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxAAA21" HorizontalAlignment="Left" Height="16" Margin="162,346,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
 
-        <Label x:Name="labeNns" Content="Nns" HorizontalAlignment="Left" Margin="117,361,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labeNfm" Content="Nfm" HorizontalAlignment="Left" Margin="117,381,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labeNim" Content="Nin" HorizontalAlignment="Left" Margin="117,401,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labeNns" Content="Nns" HorizontalAlignment="Left" Margin="122,361,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labeNfm" Content="Nfm" HorizontalAlignment="Left" Margin="122,381,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labeNim" Content="Nin" HorizontalAlignment="Left" Margin="122,401,0,0" VerticalAlignment="Top"/>
 
-        <TextBox x:Name="textBoNns" HorizontalAlignment="Left" Height="16" Margin="157,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoNfm" HorizontalAlignment="Left" Height="16" Margin="157,386,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoNim" HorizontalAlignment="Left" Height="16" Margin="157,406,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoNns" HorizontalAlignment="Left" Height="16" Margin="162,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoNfm" HorizontalAlignment="Left" Height="16" Margin="162,386,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoNim" HorizontalAlignment="Left" Height="16" Margin="162,406,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
 
-        <TextBox x:Name="textBoxNns" HorizontalAlignment="Left" Height="16" Margin="51,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxNfm" HorizontalAlignment="Left" Height="16" Margin="51,386,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxNim" HorizontalAlignment="Left" Height="16" Margin="51,406,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxNns" HorizontalAlignment="Left" Height="16" Margin="56,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxNfm" HorizontalAlignment="Left" Height="16" Margin="56,386,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxNim" HorizontalAlignment="Left" Height="16" Margin="56,406,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
 
-        <Label x:Name="labelNns" Content="Nns" HorizontalAlignment="Left" Margin="3,361,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelNfm" Content="Nfm" HorizontalAlignment="Left" Margin="3,381,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelNim" Content="Nin" HorizontalAlignment="Left" Margin="3,401,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelNns" Content="Nns" HorizontalAlignment="Left" Margin="8,361,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelNfm" Content="Nfm" HorizontalAlignment="Left" Margin="8,381,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelNim" Content="Nin" HorizontalAlignment="Left" Margin="8,401,0,0" VerticalAlignment="Top"/>
 
-        <Label x:Name="labelx11" Content="X11" HorizontalAlignment="Left" Margin="3,421,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelx12" Content="X12" HorizontalAlignment="Left" Margin="3,441,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelX11" Content="X'11" HorizontalAlignment="Left" Margin="3,461,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelX12" Content="X'12" HorizontalAlignment="Left" Margin="3,481,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelx11" Content="X11" HorizontalAlignment="Left" Margin="8,421,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelx12" Content="X12" HorizontalAlignment="Left" Margin="8,441,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelX11" Content="X'11" HorizontalAlignment="Left" Margin="8,461,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelX12" Content="X'12" HorizontalAlignment="Left" Margin="8,481,0,0" VerticalAlignment="Top"/>
 
-        <TextBox x:Name="textBoxx11" HorizontalAlignment="Left" Height="16" Margin="51,426,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxx12" HorizontalAlignment="Left" Height="16" Margin="51,446,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxX11" HorizontalAlignment="Left" Height="16" Margin="51,466,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxX12" HorizontalAlignment="Left" Height="16" Margin="51,486,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxx11" HorizontalAlignment="Left" Height="16" Margin="56,426,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxx12" HorizontalAlignment="Left" Height="16" Margin="56,446,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxX11" HorizontalAlignment="Left" Height="16" Margin="56,466,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxX12" HorizontalAlignment="Left" Height="16" Margin="56,486,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
 
-        <Label x:Name="labelx21" Content="X21" HorizontalAlignment="Left" Margin="117,421,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelX21" Content="X22" HorizontalAlignment="Left" Margin="117,441,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelx22" Content="X'21" HorizontalAlignment="Left" Margin="117,461,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="labelX22" Content="X'22" HorizontalAlignment="Left" Margin="117,481,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelx21" Content="X21" HorizontalAlignment="Left" Margin="122,421,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelX21" Content="X22" HorizontalAlignment="Left" Margin="122,441,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelx22" Content="X'21" HorizontalAlignment="Left" Margin="122,461,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelX22" Content="X'22" HorizontalAlignment="Left" Margin="122,481,0,0" VerticalAlignment="Top"/>
 
-        <TextBox x:Name="textBoxx21" HorizontalAlignment="Left" Height="16" Margin="157,426,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxx22" HorizontalAlignment="Left" Height="16" Margin="157,446,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxX21" HorizontalAlignment="Left" Height="16" Margin="157,466,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="textBoxX22" HorizontalAlignment="Left" Height="16" Margin="157,486,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxx21" HorizontalAlignment="Left" Height="16" Margin="162,426,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxx22" HorizontalAlignment="Left" Height="16" Margin="162,446,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxX21" HorizontalAlignment="Left" Height="16" Margin="162,466,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxX22" HorizontalAlignment="Left" Height="16" Margin="162,486,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
 
-        <Button x:Name="button" Content="Нарисовать график" HorizontalAlignment="Left" Margin="3,512,0,0" VerticalAlignment="Top" Width="214" Click="button_Click" Height="47" Background="#FFE24141" IsDefault="True"/>
-        <GroupBox x:Name="groupBox" Header="Предприятие 1" HorizontalAlignment="Left" Margin="3,10,0,0" VerticalAlignment="Top" Height="497" Width="109" BorderBrush="Black"/>
-        <GroupBox x:Name="groupBox1" Header="Предприятие 2" HorizontalAlignment="Left" Margin="117,10,0,0" VerticalAlignment="Top" Height="497" Width="100" BorderBrush="Black"/>
+        <Button x:Name="button" Content="Нарисовать график" HorizontalAlignment="Left" Margin="8,512,0,0" VerticalAlignment="Top" Width="214" Click="button_Click" Height="47" Background="#FFE24141" IsDefault="True"/>
+        <GroupBox x:Name="groupBox" Header="Предприятие 1" HorizontalAlignment="Left" Margin="8,10,0,0" VerticalAlignment="Top" Height="497" Width="109" BorderBrush="Black"/>
+        <GroupBox x:Name="groupBox1" Header="Предприятие 2" HorizontalAlignment="Left" Margin="122,10,0,0" VerticalAlignment="Top" Height="497" Width="100" BorderBrush="Black"/>
 
         <h:HelixViewport3D Name="HelixViewport3D" 
                                PanGesture="LeftClick"
-                               DataContext="{Binding PreviewPlot, UpdateSourceTrigger=PropertyChanged}" RenderTransformOrigin="0.499,0.503" Margin="10" Grid.Column="1"
+                               DataContext="{Binding PreviewPlot, UpdateSourceTrigger=PropertyChanged}" RenderTransformOrigin="0.499,0.503" Margin="10" Grid.Column="1" BorderThickness="1" BorderBrush="Black"
                                >
             <!--DefaultCamera="{Binding PerspectiveCamera, UpdateSourceTrigger=PropertyChanged}" 
                                services:HelixViewport3DZoomExtent.ZoomExtentsOnUpdate="{Binding RelativeSource={RelativeSource AncestorType={x:Type views:WellSurveyPlot3DPreview}}, 
