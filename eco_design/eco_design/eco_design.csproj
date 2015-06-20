@@ -86,6 +86,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BLL\ComparisonException.cs" />
+    <Compile Include="BLL\ParametersContainer.cs" />
+    <Compile Include="BLL\Algorithm.cs" />
     <Compile Include="DAL\CompanyContext.cs" />
     <Compile Include="DAL\Product.cs" />
     <Compile Include="UI\MainWindow.xaml.cs">
@@ -122,9 +125,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
       <Visible>False</Visible>

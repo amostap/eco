@@ -1,4 +1,5 @@
-﻿using System;
+﻿using eco_design.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,10 @@ namespace eco_design
         public MainWindow()
         {
             InitializeComponent();
+
+            CompanyContext c = new CompanyContext();
+            c.Companies.Add(new Company() { CompanyName = "1" });
+            c.SaveChanges();
         }
     }
 }
