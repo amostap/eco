@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:eco_design"
         mc:Ignorable="d"
         Title="MainWindow" Height="524.5" Width="804">
-    
-    <Grid>    
+
+    <Grid>
         <Label x:Name="labelk11" Content="k-11" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top"/>
         <Label x:Name="labelk11p" Content="k+11" HorizontalAlignment="Left" Margin="15,30,0,0" VerticalAlignment="Top"/>
         <Label x:Name="labelk12" Content="k-12" HorizontalAlignment="Left" Margin="15,50,0,0" VerticalAlignment="Top"/>
@@ -16,7 +16,7 @@
         <TextBox x:Name="textBoxk11p" HorizontalAlignment="Left" Height="16" Margin="63,32,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
         <TextBox x:Name="textBoxk12" HorizontalAlignment="Left" Height="16" Margin="63,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
         <TextBox x:Name="textBoxk12p" HorizontalAlignment="Left" Height="16" Margin="63,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-       
+
         <Label x:Name="labelk21" Content="k'-21" HorizontalAlignment="Left" Margin="15,90,0,0" VerticalAlignment="Top"/>
         <Label x:Name="labelk21p" Content="k'+21" HorizontalAlignment="Left" Margin="15,110,0,0" VerticalAlignment="Top"/>
         <Label x:Name="labelk22" Content="k'-22" HorizontalAlignment="Left" Margin="15,130,0,0" VerticalAlignment="Top"/>
@@ -34,7 +34,7 @@
         <TextBox x:Name="textBok11p" HorizontalAlignment="Left" Height="16" Margin="170,32,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
         <TextBox x:Name="textBok12" HorizontalAlignment="Left" Height="16" Margin="170,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
         <TextBox x:Name="textBok12p" HorizontalAlignment="Left" Height="16" Margin="170,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-       
+
         <Label x:Name="labek21m" Content="k-21" HorizontalAlignment="Left" Margin="130,90,0,0" VerticalAlignment="Top"/>
         <Label x:Name="labek21" Content="k+21" HorizontalAlignment="Left" Margin="130,110,0,0" VerticalAlignment="Top"/>
         <Label x:Name="labek22m" Content="k-22" HorizontalAlignment="Left" Margin="130,130,0,0" VerticalAlignment="Top"/>
@@ -43,7 +43,7 @@
         <TextBox x:Name="textBok21p" HorizontalAlignment="Left" Height="16" Margin="170,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
         <TextBox x:Name="textBok22" HorizontalAlignment="Left" Height="16" Margin="170,135,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
         <TextBox x:Name="textBok22p" HorizontalAlignment="Left" Height="16" Margin="170,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        
+
         <Label x:Name="labelT11" Content="T11" HorizontalAlignment="Left" Margin="15,170,0,0" VerticalAlignment="Top"/>
         <Label x:Name="labelT12" Content="T12" HorizontalAlignment="Left" Margin="15,190,0,0" VerticalAlignment="Top"/>
         <Label x:Name="labelT21" Content="T'21" HorizontalAlignment="Left" Margin="15,210,0,0" VerticalAlignment="Top"/>
@@ -52,7 +52,7 @@
         <TextBox x:Name="textBoxT12" HorizontalAlignment="Left" Height="16" Margin="63,195,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
         <TextBox x:Name="textBoxT21" HorizontalAlignment="Left" Height="16" Margin="63,215,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
         <TextBox x:Name="textBoxT22" HorizontalAlignment="Left" Height="16" Margin="63,235,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-       
+
         <Label x:Name="labeT11" Content="T'11" HorizontalAlignment="Left" Margin="130,170,0,0" VerticalAlignment="Top"/>
         <Label x:Name="labeT12" Content="T'12" HorizontalAlignment="Left" Margin="130,190,0,0" VerticalAlignment="Top"/>
         <Label x:Name="labeT21" Content="T21" HorizontalAlignment="Left" Margin="130,210,0,0" VerticalAlignment="Top"/>
@@ -61,7 +61,7 @@
         <TextBox x:Name="textBoT12" HorizontalAlignment="Left" Height="16" Margin="170,195,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
         <TextBox x:Name="textBoT21" HorizontalAlignment="Left" Height="16" Margin="170,215,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
         <TextBox x:Name="textBoT22" HorizontalAlignment="Left" Height="16" Margin="170,235,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        
+
         <Label x:Name="labelA12" Content="a'12" HorizontalAlignment="Left" Margin="15,250,0,0" VerticalAlignment="Top"/>
         <Label x:Name="labelAA12" Content="a''12" HorizontalAlignment="Left" Margin="15,270,0,0" VerticalAlignment="Top"/>
         <Label x:Name="labelAAAA12" Content="a'''12" HorizontalAlignment="Left" Margin="15,290,0,0" VerticalAlignment="Top"/>
@@ -83,15 +83,36 @@
         <TextBox x:Name="textBoNns" HorizontalAlignment="Left" Height="16" Margin="170,315,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
         <TextBox x:Name="textBoNfm" HorizontalAlignment="Left" Height="16" Margin="170,335,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
         <TextBox x:Name="textBoNim" HorizontalAlignment="Left" Height="16" Margin="170,355,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        
+
         <TextBox x:Name="textBoxNns" HorizontalAlignment="Left" Height="16" Margin="63,315,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
         <TextBox x:Name="textBoxNfm" HorizontalAlignment="Left" Height="16" Margin="63,335,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
         <TextBox x:Name="textBoxNim" HorizontalAlignment="Left" Height="16" Margin="63,355,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
-        
+
         <Label x:Name="labelNns" Content="Nns" HorizontalAlignment="Left" Margin="15,310,0,0" VerticalAlignment="Top"/>
         <Label x:Name="labelNfm" Content="Nfm" HorizontalAlignment="Left" Margin="15,330,0,0" VerticalAlignment="Top"/>
         <Label x:Name="labelNim" Content="Nin" HorizontalAlignment="Left" Margin="15,350,0,0" VerticalAlignment="Top"/>
-   
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="95,400,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+
+        <Label x:Name="labelx11" Content="X11" HorizontalAlignment="Left" Margin="15,370,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelx12" Content="X12" HorizontalAlignment="Left" Margin="15,390,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelX11" Content="X'11" HorizontalAlignment="Left" Margin="15,410,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelX12" Content="X'12" HorizontalAlignment="Left" Margin="15,430,0,0" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="textBoxx11" HorizontalAlignment="Left" Height="16" Margin="63,375,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxx12" HorizontalAlignment="Left" Height="16" Margin="63,395,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxX11" HorizontalAlignment="Left" Height="16" Margin="63,415,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxX12" HorizontalAlignment="Left" Height="16" Margin="63,435,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+
+        <Label x:Name="labelx21" Content="X21" HorizontalAlignment="Left" Margin="130,370,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelX21" Content="X22" HorizontalAlignment="Left" Margin="130,390,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelx22" Content="X'21" HorizontalAlignment="Left" Margin="130,410,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelX22" Content="X'22" HorizontalAlignment="Left" Margin="130,430,0,0" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="textBoxx21" HorizontalAlignment="Left" Height="16" Margin="170,375,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxx22" HorizontalAlignment="Left" Height="16" Margin="170,395,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxX21" HorizontalAlignment="Left" Height="16" Margin="170,415,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="textBoxX22" HorizontalAlignment="Left" Height="16" Margin="170,435,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+
+        <Button x:Name="button" Content="Draw" HorizontalAlignment="Left" Margin="63,461,0,0" VerticalAlignment="Top" Width="157" Click="button_Click"/>
+
     </Grid>
 </Window>
