@@ -149,8 +149,8 @@
         <Label x:Name="label12" Content="max" HorizontalAlignment="Left" Margin="203,448,0,0" VerticalAlignment="Top" Height="26" Width="32"/>
         <Label x:Name="label13" Content="min" HorizontalAlignment="Left" Margin="146,495,0,0" VerticalAlignment="Top" Height="26" Width="30"/>
         <Label x:Name="label14" Content="max" HorizontalAlignment="Left" Margin="203,495,0,0" VerticalAlignment="Top" Height="26" Width="32"/>
-        <!--<GroupBox x:Name = "groupBox" Header = "Предприятие 1" HorizontalAlignment = "Left" Margin = "10,8,0,0" VerticalAlignment = "Top" Height = "515" Width = "128" />
-        <GroupBox x:Name = "groupBox1" Header = "Предприятие 2" HorizontalAlignment = "Left" Margin = "143,8,0,0" VerticalAlignment = "Top" Height = "515" Width = "128" Grid.ColumnSpan="2" />-->
+        <GroupBox x:Name = "groupBox" Header = "Предприятие 1" HorizontalAlignment = "Left" Margin = "10,8,0,0" VerticalAlignment = "Top" Height = "515" Width = "128" />
+        <GroupBox x:Name = "groupBox1" Header = "Предприятие 2" HorizontalAlignment = "Left" Margin = "143,8,0,0" VerticalAlignment = "Top" Height = "515" Width = "128" Grid.ColumnSpan="2" />
 
 
     </Grid>
