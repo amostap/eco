@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:eco_design"
+        xmlns:h="http://helix-toolkit.org/wpf"
         mc:Ignorable="d"
         Title="MainWindow" Height="524.5" Width="804">
     <Grid>    
@@ -87,6 +88,18 @@
         <TextBox x:Name="textBoNns" HorizontalAlignment="Left" Height="16" Margin="170,315,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
         <TextBox x:Name="textBoNfm" HorizontalAlignment="Left" Height="16" Margin="170,335,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
         <TextBox x:Name="textBoNim" HorizontalAlignment="Left" Height="16" Margin="170,355,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+
+        <h:HelixViewport3D Name="HelixViewport3D" 
+                               PanGesture="LeftClick"
+                               DataContext="{Binding PreviewPlot, UpdateSourceTrigger=PropertyChanged}" RenderTransformOrigin="0.499,0.503" Margin="225,10,10,10"
+                               >
+            <!--DefaultCamera="{Binding PerspectiveCamera, UpdateSourceTrigger=PropertyChanged}" 
+                               services:HelixViewport3DZoomExtent.ZoomExtentsOnUpdate="{Binding RelativeSource={RelativeSource AncestorType={x:Type views:WellSurveyPlot3DPreview}}, 
+                                                                                        Path=DataContext.PreviewUpdatedReZoom, UpdateSourceTrigger=PropertyChanged}"-->
+
+            <h:SunLight/>
+
+        </h:HelixViewport3D>
 
     </Grid>
 </Window>
