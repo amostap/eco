@@ -64,7 +64,7 @@
                 res2 += N[p, i] * J(x, xs, A[p, i], param);
             }
 
-            double res3 = res1 + res2;
+            double res3 = res1 - res2;
 
             return res3;
         }
