@@ -39,7 +39,7 @@ namespace eco_design
             private double[] X2 { get; set; }      //X2 == X'2 = [X'21; X'22]
 
   
-            public double[,] A { get; set; }
+            public double[,] A { get; set; }                                // 2 x 3
 
             public double[,] N { get; set; }                                // 2 x 3
 
@@ -47,14 +47,14 @@ namespace eco_design
 
             public double[,] K { get; set; }                                // 2 x 8
 
-            private double a12, aa12, aaa12;                                //a12=a12' aa12=a''12...предприятие 1
-            private double a21, aa21, aaa21;                                //same предприятие 2
+            private double a12, aa12, aaa12;                                // a12=a12' aa12=a''12...предприятие 1
+            private double a21, aa21, aaa21;                                // same предприятие 2
             private double nns, nfm, nim;                                   // предприятие 1   
             private double nns1, nfm1, nim1;                                // предприятие 2
             private double t11, t12, T21, T22;                              // t11=T11, T21=T'21..предприятие 1  
             private double t21, t22, T11, T12;                              // t21=T21, T11=T'11..предприятие 2
-            private double k11, K11, k12, K12, k21, K21, k22, K22;          //k11=K-11, K11=K+11
-            private double kk21, KK21, kk22, KK22, kk11, KK11, kk12, KK12;  //k11=K-11, K11=K+11
+            private double k11, K11, k12, K12, k21, K21, k22, K22;          // k11=K-11, K11=K+11
+            private double kk21, KK21, kk22, KK22, kk11, KK11, kk12, KK12;  // k11=K-11, K11=K+11
             private double x11, x12, X11, X12;
             private double x21, x22, X21, X22;
 
@@ -64,7 +64,7 @@ namespace eco_design
 
             //if (textBoxA12 != null && textBoxAA12 != null && textBoxAA12 != null &&
             //    textBoxAAA12 != null && textBoxA21 != null && textBoxAA21 != null && textBoxAAA21 != null)
-            //{
+
             x11 = Convert.ToDouble(textBoxx11.Text);
             x12 = Convert.ToDouble(textBoxx12.Text);
             X11 = Convert.ToDouble(textBoxX11.Text);
@@ -81,29 +81,34 @@ namespace eco_design
             x2 = new[] { x21, x22 };
             X2 = new[] { X21, X22 };
 
+            //предприятие 1
             a12 = Convert.ToDouble(textBoxA12.Text);
             aa12 = Convert.ToDouble(textBoxAA12.Text);
             aaa12 = Convert.ToDouble(textBoxAAA12.Text);
+            //предприятие 2
             a21 = Convert.ToDouble(textBoxA21.Text);
             aa21 = Convert.ToDouble(textBoxAA21.Text);
             aaa21 = Convert.ToDouble(textBoxAAA21.Text);
 
             A = new[,] { { a12, aa12, aaa12 }, { a21, aa21, aaa21 } };
 
+            //предприятие 1
             nns = Convert.ToDouble(textBoxNns.Text);
             nfm = Convert.ToDouble(textBoxNfm.Text);
             nim = Convert.ToDouble(textBoxNim.Text);
+            //предприятие 2
             nns1 = Convert.ToDouble(textBoNns.Text);
             nfm1 = Convert.ToDouble(textBoNfm.Text);
             nim1 = Convert.ToDouble(textBoNim.Text);
 
             N = new[,] { { nns, nfm, nim }, { nns1, nfm1, nim1 } };
 
+            //предприятие 1
             t11 = Convert.ToDouble(textBoxT11.Text);
             t12 = Convert.ToDouble(textBoxT12.Text);
             T21 = Convert.ToDouble(textBoxT21.Text);
             T22 = Convert.ToDouble(textBoxT22.Text);
-
+            //предприятие 2
             t21 = Convert.ToDouble(textBoT21.Text);
             t22 = Convert.ToDouble(textBoT22.Text);
             T11 = Convert.ToDouble(textBoT11.Text);
