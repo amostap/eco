@@ -12,7 +12,7 @@ namespace eco_design
     /// </summary>
     public partial class MainWindow : Window
     {
-        private const int MaxDistance = 50;
+        private const int MaxDistance = 30;
         private const int Range = 20;
 
         private double[] x1 { get; set; }      //x1 == X1 = [X11, X12]
