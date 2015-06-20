@@ -192,15 +192,14 @@ namespace eco_design
 
                 //if (x21 > 0 && x22 > 0 && X21 > 0 && X22 > 0)
                 //{
-                
-                                              //    x2 = new[] { x21, x22 };
-                                              //    X2 = new[] { X21, X22 };
-                                              //}
-                                              //else
-                                              //    System.Windows.MessageBox.Show("Введите верные X11, X12, X'11, X'12");
+                //    x2 = new[] { x21, x22 };
+                //    X2 = new[] { X21, X22 };
+                //}
+                //else
+                //    System.Windows.MessageBox.Show("Введите верные X11, X12, X'11, X'12");
 
-                                              //предприятие 1
-                                              a12 = Convert.ToDouble(textBoxA12.Text);
+                //предприятие 1
+                a12 = Convert.ToDouble(textBoxA12.Text);
                 aa12 = Convert.ToDouble(textBoxAA12.Text);
                 aaa12 = Convert.ToDouble(textBoxAAA12.Text);
                 //предприятие 2
@@ -216,7 +215,6 @@ namespace eco_design
                 else
                     System.Windows.MessageBox.Show("Введите верные A'21, A22...");
                 
-
                 //предприятие 1
                 nns = Convert.ToDouble(textBoxNns.Text);
                 nfm = Convert.ToDouble(textBoxNfm.Text);
@@ -233,7 +231,6 @@ namespace eco_design
                 else
                     System.Windows.MessageBox.Show("Введите верные Nns, Nfm, Nim");
                 
-
                 //предприятие 1
                 t11 = Convert.ToDouble(textBoxT11.Text);
                 t12 = Convert.ToDouble(textBoxT12.Text);
@@ -281,7 +278,6 @@ namespace eco_design
                 }
                 else
                     System.Windows.MessageBox.Show("Введите верные K");
-
 
             }
             catch (Exception)
