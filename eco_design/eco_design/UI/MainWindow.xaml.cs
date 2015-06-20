@@ -41,8 +41,9 @@ namespace eco_design
         public double t21, t22, T11, T12;                              // t21=T21, T11=T'11..предприятие 2
         public double k11, K11, k12, K12, k21, K21, k22, K22;          // k11=K-11, K11=K+11
         public double kk21, KK21, kk22, KK22, kk11, KK11, kk12, KK12;  // k11=K-11, K11=K+11
-        public double x11, x12, X11, X12;
-        public double x21, x22, X21, X22;
+
+        public double x11, x12, X11max, X12max, X11min, X12min;
+        public double x21, x22, X21max, X22max, X21min, X22min;
 
         public MainWindow()
         {
@@ -169,32 +170,37 @@ namespace eco_design
             {
                 x11 = Convert.ToDouble(textBoxx11.Text);
                 x12 = Convert.ToDouble(textBoxx12.Text);
-                X11 = Convert.ToDouble(textBoxX11.Text);
-                X12 = Convert.ToDouble(textBoxX12.Text);
+                X11max = Convert.ToDouble(textBoxX11max.Text);
+                X12max = Convert.ToDouble(textBoxX12max.Text);
+                X11min = Convert.ToDouble(textBoxX11min.Text);
+                X12min = Convert.ToDouble(textBoxX12min.Text);
 
-                if (x11 > 0 && x12 > 0 && X11 > 0 && X12 > 0)
-                {
-                    x1 = new[] { x11, x12 };
-                    X1 = new[] { X11, X12 };
-                }
-                else
-                    System.Windows.MessageBox.Show("Введите верные X11, X12, X'11, X'12");
+                //if (x11 > 0 && x12 > 0 && X11max > 0 && X12max > 0 && X12min > 0 && X12min > 0)
+                //{
+                //    x1 = new[] { x11, x12 };
+                //    X1 = new[] { X11, X12 };
+                //}
+                //else
+                //    System.Windows.MessageBox.Show("Введите верные X11, X12, X'11, X'12");
 
                 x21 = Convert.ToDouble(textBoxx21.Text);
                 x22 = Convert.ToDouble(textBoxx22.Text);
-                X21 = Convert.ToDouble(textBoxX21.Text);
-                X22 = Convert.ToDouble(textBoxX22.Text);
+                X21max = Convert.ToDouble(textBoxX21max.Text);
+                X22max = Convert.ToDouble(textBoxX22max.Text);
+                X21min = Convert.ToDouble(textBoxX21min.Text);
+                X22min = Convert.ToDouble(textBoxX22min.Text);
 
-                if (x21 > 0 && x22 > 0 && X21 > 0 && X22 > 0)
-                {
-                    x2 = new[] { x21, x22 };
-                    X2 = new[] { X21, X22 };
-                }
-                else
-                    System.Windows.MessageBox.Show("Введите верные X11, X12, X'11, X'12");
+                //if (x21 > 0 && x22 > 0 && X21 > 0 && X22 > 0)
+                //{
+                
+                                              //    x2 = new[] { x21, x22 };
+                                              //    X2 = new[] { X21, X22 };
+                                              //}
+                                              //else
+                                              //    System.Windows.MessageBox.Show("Введите верные X11, X12, X'11, X'12");
 
-                //предприятие 1
-                a12 = Convert.ToDouble(textBoxA12.Text);
+                                              //предприятие 1
+                                              a12 = Convert.ToDouble(textBoxA12.Text);
                 aa12 = Convert.ToDouble(textBoxAA12.Text);
                 aaa12 = Convert.ToDouble(textBoxAAA12.Text);
                 //предприятие 2
