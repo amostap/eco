@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:eco_design"
+        xmlns:h="http://helix-toolkit.org/wpf"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="830">
 
@@ -115,6 +116,18 @@
         <Button x:Name="button" Content="Draw" HorizontalAlignment="Left" Margin="12,512,0,0" VerticalAlignment="Top" Width="214" Click="button_Click" Height="47" Background="#FFE24141"/>
         <GroupBox x:Name="groupBox" Header="Предприятие 1" HorizontalAlignment="Left" Margin="12,24,0,0" VerticalAlignment="Top" Height="483" Width="109" BorderBrush="Black"/>
         <GroupBox x:Name="groupBox1" Header="Предприятие 2" HorizontalAlignment="Left" Margin="126,24,0,0" VerticalAlignment="Top" Height="483" Width="100" BorderBrush="Black"/>
+
+        <h:HelixViewport3D Name="HelixViewport3D" 
+                               PanGesture="LeftClick"
+                               DataContext="{Binding PreviewPlot, UpdateSourceTrigger=PropertyChanged}" RenderTransformOrigin="0.499,0.503" Margin="225,10,10,10"
+                               >
+            <!--DefaultCamera="{Binding PerspectiveCamera, UpdateSourceTrigger=PropertyChanged}" 
+                               services:HelixViewport3DZoomExtent.ZoomExtentsOnUpdate="{Binding RelativeSource={RelativeSource AncestorType={x:Type views:WellSurveyPlot3DPreview}}, 
+                                                                                        Path=DataContext.PreviewUpdatedReZoom, UpdateSourceTrigger=PropertyChanged}"-->
+
+            <h:SunLight/>
+
+        </h:HelixViewport3D>
 
     </Grid>
 </Window>

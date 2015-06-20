@@ -1,11 +1,4 @@
-﻿using eco_design.DAL;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace eco_design.BLL
+﻿namespace eco_design.BLL
 {
     public class Algorithm
     {

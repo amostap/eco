@@ -1,18 +1,9 @@
-﻿using eco_design.DAL;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows.Media.Media3D;
+using HelixToolkit.Wpf;
 
 namespace eco_design
 {
@@ -21,43 +12,155 @@ namespace eco_design
     /// </summary>
     public partial class MainWindow : Window
     {
+        private const int MaxDistance = 50;
+        private const int Range = 20;
+
+        private double[] x1 { get; set; }      //x1 == X1 = [X11, X12]
+
+        private double[] X1 { get; set; }      //X1 == X'1 = [X'11,X'12]
+
+        private double[] x2 { get; set; }      //x2 == X2 = [X21, X22]
+
+        private double[] X2 { get; set; }      //X2 == X'2 = [X'21; X'22]
+
+
+        public double[,] A { get; set; }                                // 2 x 3
+
+        public double[,] N { get; set; }                                // 2 x 3
+
+        public double[,] T { get; set; }                                // 2 x 4
+
+        public double[,] K { get; set; }                                // 2 x 8
+
+        private double a12, aa12, aaa12;                                // a12=a12' aa12=a''12...предприятие 1
+        private double a21, aa21, aaa21;                                // same предприятие 2
+        private double nns, nfm, nim;                                   // предприятие 1   
+        private double nns1, nfm1, nim1;                                // предприятие 2
+        private double t11, t12, T21, T22;                              // t11=T11, T21=T'21..предприятие 1  
+        private double t21, t22, T11, T12;                              // t21=T21, T11=T'11..предприятие 2
+        private double k11, K11, k12, K12, k21, K21, k22, K22;          // k11=K-11, K11=K+11
+        private double kk21, KK21, kk22, KK22, kk11, KK11, kk12, KK12;  // k11=K-11, K11=K+11
+        private double x11, x12, X11, X12;
+        private double x21, x22, X21, X22;
+
         public MainWindow()
         {
             InitializeComponent();
 
-            CompanyContext c = new CompanyContext();
-            c.Companies.Add(new Company() { CompanyName = "1" });
-            c.SaveChanges();
+            TubeVisual3D tube = new TubeVisual3D();
+            tube.Path = new Point3DCollection
+            {
+                new Point3D(-MaxDistance, 0, 0), 
+                new Point3D(MaxDistance, 0, 0)
+            };
+            tube.Diameter = 0.1;
+            tube.Fill = Brushes.Red;
+            tube.IsPathClosed = false;
+
+            HelixViewport3D.Children.Add(tube);
+            
+            tube = new TubeVisual3D();
+            tube.Path = new Point3DCollection
+            {
+                new Point3D(0, -MaxDistance, 0), 
+                new Point3D(0, MaxDistance, 0)
+            };
+            tube.Diameter = 0.1;
+            tube.Fill = Brushes.Blue;
+            tube.IsPathClosed = false;
+
+            HelixViewport3D.Children.Add(tube);
+
+            tube = new TubeVisual3D();
+            tube.Path = new Point3DCollection
+            {
+                new Point3D(0, 0, -MaxDistance), 
+                new Point3D(0, 0, MaxDistance)
+            };
+            tube.Diameter = 0.1;
+            tube.Fill = Brushes.Green;
+            tube.IsPathClosed = false;
+
+            HelixViewport3D.Children.Add(tube);
+
+            for (int i = -MaxDistance; i <= MaxDistance; i++)
+            {
+                tube = new TubeVisual3D();
+                tube.Path = new Point3DCollection
+                {
+                    new Point3D(i, -MaxDistance, 0), 
+                    new Point3D(i, MaxDistance, 0)
+                };
+
+                tube.Diameter = 0.02;
+                tube.Fill = Brushes.DarkGray;
+                tube.IsPathClosed = false;
+
+                HelixViewport3D.Children.Add(tube);
+
+                tube = new TubeVisual3D();
+                tube.Path = new Point3DCollection
+                {
+                    new Point3D(-MaxDistance, i, 0), 
+                    new Point3D(MaxDistance, i, 0)
+                };
+
+                tube.Diameter = 0.02;
+                tube.Fill = Brushes.DarkGray;
+                tube.IsPathClosed = false;
+
+                HelixViewport3D.Children.Add(tube);
+            }
+
+            var mas = new TubeVisual3D[2 * Range];
+
+            for (int x = -Range; x < Range; x++)
+            {
+                var point3DCollection = new Point3DCollection();
+
+                for (int y = -Range; y < Range; y++)
+                {
+                    point3DCollection.Add(new Point3D(x, y, GetFunction(x, y)));
+                    
+                }
+
+                mas[x + Range] = new TubeVisual3D { Path = point3DCollection };
+                mas[x + Range].Material = new DiffuseMaterial(new SolidColorBrush(Colors.Chartreuse));
+                mas[x + Range].Diameter = 0.1;
+            }
+
+            foreach (var item in mas)
+            {
+                HelixViewport3D.Children.Add(item);
+            }
+
+            mas = new TubeVisual3D[40];
+
+            for (int y = -Range; y < Range; y++)
+            {
+                var point3DCollection = new Point3DCollection();
+
+                for (int x = -Range; x < Range; x++)
+                {
+                    point3DCollection.Add(new Point3D(x, y, GetFunction(x, y)));
+
+                }
+
+                mas[y + Range] = new TubeVisual3D { Path = point3DCollection };
+                mas[y + Range].Material = new DiffuseMaterial(new SolidColorBrush(Colors.Chartreuse));
+                mas[y + Range].Diameter = 0.1;
+            }
+
+            foreach (var item in mas)
+            {
+                HelixViewport3D.Children.Add(item);
+            }
         }
 
-            private double[] x1 { get; set; }      //x1 == X1 = [X11, X12]
-
-            private double[] X1 { get; set; }      //X1 == X'1 = [X'11,X'12]
-
-            private double[] x2 { get; set; }      //x2 == X2 = [X21, X22]
-
-            private double[] X2 { get; set; }      //X2 == X'2 = [X'21; X'22]
-
-  
-            public double[,] A { get; set; }                                // 2 x 3
-
-            public double[,] N { get; set; }                                // 2 x 3
-
-            public double[,] T { get; set; }                                // 2 x 4
-
-            public double[,] K { get; set; }                                // 2 x 8
-
-            private double a12, aa12, aaa12;                                // a12=a12' aa12=a''12...предприятие 1
-            private double a21, aa21, aaa21;                                // same предприятие 2
-            private double nns, nfm, nim;                                   // предприятие 1   
-            private double nns1, nfm1, nim1;                                // предприятие 2
-            private double t11, t12, T21, T22;                              // t11=T11, T21=T'21..предприятие 1  
-            private double t21, t22, T11, T12;                              // t21=T21, T11=T'11..предприятие 2
-            private double k11, K11, k12, K12, k21, K21, k22, K22;          // k11=K-11, K11=K+11
-            private double kk21, KK21, kk22, KK22, kk11, KK11, kk12, KK12;  // k11=K-11, K11=K+11
-            private double x11, x12, X11, X12;
-            private double x21, x22, X21, X22;
-
+        private double GetFunction(double x, double y)
+        {
+            return Math.Abs(0.1*(x*x - y*y));
+        }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
