@@ -92,20 +92,20 @@ namespace eco_design
         private void DrawGraph(Func<double, double, double> function, Color functionColor,
             double xMin, double xMax, double yMin, double yMax)
         {
-            var mas = new TubeVisual3D[2*Range];
+            var mas = new TubeVisual3D[(int)(xMax - xMin)];
 
-            for (int x = -Range; x < Range; x++)
+            for (double x = xMin; x < xMax; x++)
             {
                 var point3DCollection = new Point3DCollection();
 
-                for (int y = -Range; y < Range; y++)
+                for (double y = yMin; y < yMax; y++)
                 {
                     point3DCollection.Add(new Point3D(x, y, function(x, y)));
                 }
 
-                mas[x + Range] = new TubeVisual3D {Path = point3DCollection};
-                mas[x + Range].Material = new DiffuseMaterial(new SolidColorBrush(functionColor));
-                mas[x + Range].Diameter = 0.1;
+                mas[(int)(x - xMin)] = new TubeVisual3D {Path = point3DCollection};
+                mas[(int)(x - xMin)].Material = new DiffuseMaterial(new SolidColorBrush(functionColor));
+                mas[(int)(x - xMin)].Diameter = 0.1;
             }
 
             foreach (var item in mas)
@@ -113,20 +113,20 @@ namespace eco_design
                 HelixViewport3D.Children.Add(item);
             }
 
-            mas = new TubeVisual3D[40];
+            mas = new TubeVisual3D[(int)(yMax - yMin)];
 
-            for (int y = -Range; y < Range; y++)
+            for (double y = yMin; y < yMax; y++)
             {
                 var point3DCollection = new Point3DCollection();
 
-                for (int x = -Range; x < Range; x++)
+                for (double x = xMin; x < xMax; x++)
                 {
                     point3DCollection.Add(new Point3D(x, y, function(x, y)));
                 }
 
-                mas[y + Range] = new TubeVisual3D {Path = point3DCollection};
-                mas[y + Range].Material = new DiffuseMaterial(new SolidColorBrush(functionColor));
-                mas[y + Range].Diameter = 0.1;
+                mas[(int)(y - yMin)] = new TubeVisual3D {Path = point3DCollection};
+                mas[(int)(y - yMin)].Material = new DiffuseMaterial(new SolidColorBrush(functionColor));
+                mas[(int)(y - yMin)].Diameter = 0.1;
             }
 
             foreach (var item in mas)
@@ -137,8 +137,12 @@ namespace eco_design
 
         public void DrawAllGraphs()
         {
-            HelixViewport3D.Children.Remove(HelixViewport3D.Children.Last());
-            HelixViewport3D.Children.Remove(HelixViewport3D.Children.Last());
+            HelixViewport3D.Children.Clear();
+
+            HelixViewport3D.Children.Add(new DefaultLights());
+
+            DrawCoordinates();
+            DrawWire();
 
             DrawGraph(FSum12(GraphVariant.MaxAndMax), Colors.OrangeRed, 0, Range, 0, Range);
                 // TODO change it to min and max
@@ -377,12 +381,14 @@ namespace eco_design
                 _algorithm.N = N;
                 _algorithm.K = K;
 
-                DrawAllGraphs();
+                
             }
             catch (Exception)
             {
                 System.Windows.MessageBox.Show("Введите верные данные");
             }
+
+            DrawAllGraphs();
         }
         }
 
